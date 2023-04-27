@@ -1,5 +1,12 @@
 # codetocloud-workshop
 
+## Setup
+This repo is based on a fork of Webgoat.
+
+Open codespaces
+mvn clean install
+./mvnw spring-boot:run
+
 ## The Fine Print
 
 It is worth noting that this is **NOT SUPPORTED** by Sonatype, and is a contribution of ours
