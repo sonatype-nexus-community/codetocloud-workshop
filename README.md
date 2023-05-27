@@ -1,8 +1,8 @@
 # codetocloud-workshop
 
-## Setup
-This repo is based on a fork of Webgoat.
+The application used in this workshop repository is from [WebGoat](https://github.com/WebGoat/WebGoat), an intentionally vulnerable project maintained by OWASP.
 
+## Setup
 Open codespaces
 mvn clean install
 ./mvnw spring-boot:run
