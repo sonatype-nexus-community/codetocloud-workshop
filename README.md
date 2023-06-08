@@ -3,9 +3,14 @@
 The application used in this workshop repository is from [WebGoat](https://github.com/WebGoat/WebGoat), an intentionally vulnerable project maintained by OWASP.
 
 ## Setup
-Open codespaces
-mvn clean install
-./mvnw spring-boot:run
+Open GitHub Codespaces (<> Code -> Codespaces tab -> Create codespace on main)
+
+`mvn clean install`
+
+`./mvnw spring-boot:run`
+
+### Local setup
+If you would like to build the code locally follow the setup instructions from [WebGoat](https://github.com/WebGoat/WebGoat#readme).
 
 ## The Fine Print
 
