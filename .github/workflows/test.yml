@@ -13,6 +13,7 @@ on:
             - '*.md'
             - 'LICENSE'
             - 'docs/**'
+    workflow_dispatch:
 
 jobs:
     build:
@@ -63,3 +64,14 @@ jobs:
                 with:
                     gh_access_token: ${{ secrets.GITHUB_TOKEN }}
                     report_path: 'robotreport'
+            -   name: Build with Maven
+                run: mvn package --file pom.xml
+            -   name: Nexus IQ for GitHub Actions
+                uses: sonatype-nexus-community/iq-github-action@1.1.1
+                with:
+                    serverUrl: https://iq.pmeharg.ngrok.io/
+                    username: admin2
+                    password: admin123
+                    applicationId: codetocloud
+                    stage: Build
+                    target: ./target/
