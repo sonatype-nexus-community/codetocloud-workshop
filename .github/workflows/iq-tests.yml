@@ -1,0 +1,45 @@
+name: "IQ-Scan-Test"
+on:
+    pull_request:
+        paths-ignore:
+            - 'LICENSE'
+            - 'docs/**'
+    push:
+        tags-ignore:
+            - 'v*'
+        paths-ignore:
+            - '.txt'
+            - '*.MD'
+            - '*.md'
+            - 'LICENSE'
+            - 'docs/**'
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # display name of the job
+        name: "IQ Scan test"
+        steps:
+            # Uses an default action to checkout the code
+            -   uses: actions/checkout@v3
+            # Uses an action to add JDK 17 to the VM (and mvn?)
+            -   name: set up JDK 17
+                uses: actions/setup-java@v3
+                with:
+                    distribution: 'temurin'
+                    java-version: 17
+                    architecture: x64
+          
+        
+            -   name: Build with Maven
+                run: mvn package --file pom.xml
+            -   name: Nexus IQ for GitHub Actions
+                uses: sonatype-nexus-community/iq-github-action@1.1.1
+                with:
+                    serverUrl: https://iq.pmeharg.ngrok.io/
+                    username: admin2
+                    password: admin123
+                    applicationId: codetocloud
+                    stage: Build
+                    target: ./target/
