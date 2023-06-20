@@ -37,7 +37,7 @@ jobs:
             -   name: Nexus IQ for GitHub Actions
                 uses: sonatype-nexus-community/iq-github-action@1.1.1
                 with:
-                    serverUrl: https://iq.pmeharg.ngrok.io/
+                    serverUrl: https://qmny7dht8u-nxiq.sonatype-se.com/
                     username: admin2
                     password: admin123
                     applicationId: codetocloud
