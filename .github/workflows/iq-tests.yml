@@ -38,8 +38,8 @@ jobs:
                 uses: sonatype-nexus-community/iq-github-action@1.1.1
                 with:
                     serverUrl: https://qmny7dht8u-nxiq.sonatype-se.com/
-                    username: admin2
-                    password: admin123
+                    username: admin
+                    password: DevRel123
                     applicationId: codetocloud
                     stage: Build
                     target: ./target/
