@@ -10,6 +10,10 @@ Open GitHub Codespaces (<> Code -> Codespaces tab -> Create codespace on main)
 
 `./mvnw spring-boot:run`
 
+Once the application is running, go to the "Ports" tab and forward port 8080, and set the visibility to "Public".
+
+You can then open the Local Address in a browser as `<localAddress>/WebGoat`
+
 ### Local setup
 
 If you would like to build the code locally follow the setup instructions from [WebGoat](https://github.com/WebGoat/WebGoat#readme).
