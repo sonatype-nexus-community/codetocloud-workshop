@@ -39,7 +39,7 @@ jobs:
                 with:
                     serverUrl: https://os8aybi6k0-nxiq.sonatype-se.com/
                     username: admin
-                    password: admin123
+                    password: admin1234
                     applicationId: codetocloud
                     stage: Build
                     target: ./target/
