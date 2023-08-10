@@ -12,7 +12,7 @@ Open GitHub Codespaces (<> Code -> Codespaces tab -> Create codespace on main)
 
 Once the application is running, go to the "Ports" tab and forward port 8080, and set the visibility to "Public".
 
-You can then open the Local Address in a browser as `<localAddress>/WebGoat`
+You can then open the Local Address in a browser as `<localAddress>/WebGoat`. You will need to create an account to be able to login.
 
 ### Local setup
 
@@ -27,8 +27,7 @@ Here's what you need to know: Spring provides inversion of control (ioc) to Java
 - What is a bean you ask? A bean is an instance of a class. You will often see these indicated by annotations like @Component and @Bean throughout the codebase
 
 File structure:
-src/main/java/org/owasp/webgoat
-container/ - start looking here for security flaws
+src/main/java/org/owasp/webgoat/container/ - start looking here for security flaws
 
         lessons/ - include success criteria for each lesson
         server/ - some startup classes, StartWebGoat:main is the application entrypoint
