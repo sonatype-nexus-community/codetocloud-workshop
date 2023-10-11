@@ -52,12 +52,12 @@ As you can see the JSP file prints unfiltered user input which is never a good i
 You want people to access the page like this:
 
 ----
-http://hostname.com/mywebapp/main.jsp?first_name=John&last_name=Smith
+https://hostname.com/mywebapp/main.jsp?first_name=John&last_name=Smith
 ----
 
 But what happens if someone uses this link:
 ----
-http://hostname.com/mywebapp/main.jsp?first_name=<script>alert("XSS Test")</script>
+https://hostname.com/mywebapp/main.jsp?first_name=<script>alert("XSS Test")</script>
 ----
 
 === It is your turn!

@@ -7,8 +7,8 @@ upload.
 === How does it work?
 
 For example, let's assume we have an application that hosts some files, in the following
-format: `http://example.com/file=report.pdf` now as an attacker, you are interested in other files, of course, so
-you try `http://example.com/file=../../../../../etc/passwd.` In this case, you try walking up to the root of the filesystem
+format: `https://example.com/file=report.pdf` now as an attacker, you are interested in other files, of course, so
+you try `https://example.com/file=../../../../../etc/passwd.` In this case, you try walking up to the root of the filesystem
 and then go into `/etc/passwd` to gain access to this file. The `../` is called dot-dot-slash, another name
 for this attack.
 

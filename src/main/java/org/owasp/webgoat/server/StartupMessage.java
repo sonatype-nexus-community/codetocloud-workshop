@@ -20,7 +20,7 @@ public class StartupMessage {
   void onStartup(ApplicationReadyEvent event) {
     if (StringUtils.hasText(port)
         && !StringUtils.hasText(System.getProperty("running.in.docker"))) {
-      log.info("Please browse to http://{}:{}/WebGoat to get started...", address, port);
+      log.info("Please browse to https://{}:{}/WebGoat to get started...", address, port);
     }
     if (event.getApplicationContext().getApplicationName().contains("WebGoat")) {
       port = event.getApplicationContext().getEnvironment().getProperty("server.port");

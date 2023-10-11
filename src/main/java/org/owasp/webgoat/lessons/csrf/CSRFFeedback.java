@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -114,7 +114,7 @@ public class CSRFFeedback extends AssignmentEndpoint {
 
   /**
    * Solution <form name="attack" enctype="text/plain"
-   * action="http://localhost:8080/WebGoat/csrf/feedback/message" METHOD="POST"> <input
+   * action="https://localhost:8080/WebGoat/csrf/feedback/message" METHOD="POST"> <input
    * type="hidden" name='{"name": "Test", "email": "test1233@dfssdf.de", "subject": "service",
    * "message":"dsaffd"}'> </form> <script>document.attack.submit();</script>
    */

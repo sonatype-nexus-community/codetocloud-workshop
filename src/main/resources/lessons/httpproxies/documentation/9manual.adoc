@@ -15,7 +15,7 @@ In the latest release of Chrome and Firefox no longer proxy traffic from localho
 
 image::images/newlocalhost.png[Hosts file,style="lesson-image"]
 
-Then in your browser, use http://www.webgoat.local:8080/WebGoat as the address.
+Then in your browser, use https://www.webgoat.local:8080/WebGoat as the address.
 
 === Configure browser to use proxy
 

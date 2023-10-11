@@ -31,7 +31,7 @@ There are three main categories of SQL commands:
 
 Each of these command types can be used by attackers to compromise the confidentiality, integrity, and/or availability of a system. Proceed with the lesson to learn more about the SQL command types and how they relate to protections goals.
 
-If you are still struggling with SQL and need more information or practice, you can visit http://www.sqlcourse.com/ for free and interactive online training.
+If you are still struggling with SQL and need more information or practice, you can visit https://www.sqlcourse.com/ for free and interactive online training.
 
 === It is your turn!
 Look at the example table.

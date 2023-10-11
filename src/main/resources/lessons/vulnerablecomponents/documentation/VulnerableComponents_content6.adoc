@@ -9,7 +9,7 @@
 
 == What to do
 * Generate an OSS Bill of Materials.
-** Use http://lmgtfy.com/?q=OSS+bill+of+materials[automated tooling]
+** Use https://lmgtfy.com/?q=OSS+bill+of+materials[automated tooling]
 * Baseline open source consumption in your organization.
 * Develop an open source component risk management strategy to mitigate current risk and reduce future risk.
 

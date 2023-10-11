@@ -26,7 +26,7 @@ For example:
 --
 function postBeacon() {
     var data= new Blob([JSON.stringify({"author" :"WebGoat"})], {type : 'application/json'});
-    navigator.sendBeacon("http://localhost:8083", data)
+    navigator.sendBeacon("https://localhost:8083", data)
 }
 --
 

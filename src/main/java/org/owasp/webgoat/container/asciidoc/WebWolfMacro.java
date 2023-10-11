@@ -64,7 +64,7 @@ public class WebWolfMacro extends InlineMacroProcessor {
       host = host.substring(0, semicolonIndex);
       host = host.concat(":").concat(port);
     }
-    return "http://" + host + (includeWebWolfContext() ? "/WebWolf" : "");
+    return "https://" + host + (includeWebWolfContext() ? "/WebWolf" : "");
   }
 
   protected boolean includeWebWolfContext() {

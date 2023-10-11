@@ -17,7 +17,7 @@ POST /csrf/feedback/message HTTP/1.1
 }
 ----
 
-More information can be found http://pentestmonkey.net/blog/csrf-xml-post-request[here]
+More information can be found https://pentestmonkey.net/blog/csrf-xml-post-request[here]
 
 Remember you need to make the call from another origin (WebWolf can help here) and you need to be logged in into
 WebGoat.

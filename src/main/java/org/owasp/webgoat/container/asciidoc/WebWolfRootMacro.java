@@ -6,7 +6,7 @@ import java.util.Map;
  * Usage in asciidoc:
  *
  * <p>webWolfLink:here[] will display a href with here as text webWolfLink:landing[noLink] will
- * display the complete url, for example: http://WW_HOST:WW_PORT/landing
+ * display the complete url, for example: https://WW_HOST:WW_PORT/landing
  */
 public class WebWolfRootMacro extends WebWolfMacro {
 

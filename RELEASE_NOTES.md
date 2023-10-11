@@ -32,7 +32,7 @@ many more releases this year.
 - Add WebWolf button in WebGoat
 - Move all lessons into `src/main/resources`
 - WebGoat selects a port dynamically when starting. It will still start of port 8080 it will try another port to ease the user experience.
-- WebGoat logs URL after startup: `Please browse to http://127.0.0.1:8080/WebGoat to get started...`
+- WebGoat logs URL after startup: `Please browse to https://127.0.0.1:8080/WebGoat to get started...`
 - Simplify `Dockerfile` as we no longer need a script to start everything
 - Maven build now start WebGoat jar with Maven plugin to make sure we run against the latest build.
 - Added `Initializable` interface for a lesson, an assignment can implement this interface to set it up for a specific user and to reset the assignment back to its original state when a reset lesson occurs. See `BlindSendFileAssignment` for an example.
@@ -65,7 +65,7 @@ many more releases this year.
 
 ### New functionality
 
-- Docker image now supports nginx when browsing to http://localhost a landing page is shown.
+- Docker image now supports nginx when browsing to https://localhost a landing page is shown.
 
 ### Bug fixes
 

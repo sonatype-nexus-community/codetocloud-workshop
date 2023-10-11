@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -49,7 +49,7 @@ public class IDORViewOwnProfileAltUrl extends AssignmentEndpoint {
       if (userSessionData.getValue("idor-authenticated-as").equals("tom")) {
         // going to use session auth to view this one
         String authUserId = (String) userSessionData.getValue("idor-authenticated-user-id");
-        // don't care about http://localhost:8080 ... just want WebGoat/
+        // don't care about https://localhost:8080 ... just want WebGoat/
         String[] urlParts = url.split("/");
         if (urlParts[0].equals("WebGoat")
             && urlParts[1].equals("IDOR")

@@ -8,7 +8,7 @@ image::images/zap-browser-button.png[ZAP Start,style="lesson-image"]
 
 {nbsp} +
 
-In the browser type: http://localhost:8080/WebGoat, you should see WebGoat and the OWASP ZAP Heads On Display (if you use OWASP ZAP as the proxy):
+In the browser type: https://localhost:8080/WebGoat, you should see WebGoat and the OWASP ZAP Heads On Display (if you use OWASP ZAP as the proxy):
 
 {nbsp} +
 

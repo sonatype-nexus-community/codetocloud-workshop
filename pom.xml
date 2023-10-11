@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -91,7 +91,7 @@
       <subscribe>https://lists.owasp.org/mailman/listinfo/owasp-webgoat</subscribe>
       <unsubscribe>Owasp-webgoat-request@lists.owasp.org</unsubscribe>
       <post>owasp-webgoat@lists.owasp.org</post>
-      <archive>http://lists.owasp.org/pipermail/owasp-webgoat/</archive>
+      <archive>https://lists.owasp.org/pipermail/owasp-webgoat/</archive>
     </mailingList>
   </mailingLists>
 
@@ -270,10 +270,24 @@
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
     </dependency>
+<!--      FIXME: transitive volnerability
+Provides transitive vulnerable dependency maven:io.undertow:undertow-core:2.2.18.Final
+CVE-2022-2053 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2022-2764 4.9 Uncontrolled Resource Consumption vulnerability
+CVE-2022-1259 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2022-4492 7.5 Improper Certificate Validation vulnerability
+CVE-2023-1108 7.5 Uncontrolled Resource Consumption vulnerability
+-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-undertow</artifactId>
     </dependency>
+
+<!--      FIXME: volnerability
+Provides transitive vulnerable dependency maven:com.fasterxml.jackson.core:jackson-databind:2.13.3
+CVE-2022-42003 7.5 Deserialization of Untrusted Data vulnerability
+CVE-2022-42004 7.5 Deserialization of Untrusted Data vulnerability
+-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -300,6 +314,11 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
+
+<!--      FIXME:
+Provides transitive vulnerable dependency maven:org.springframework.security:spring-security-core:5.7.2
+CVE-2022-31692 9.8 Incorrect Authorization vulnerability
+-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
@@ -312,6 +331,11 @@
       <groupId>org.thymeleaf.extras</groupId>
       <artifactId>thymeleaf-extras-springsecurity5</artifactId>
     </dependency>
+
+<!--      FIXME:
+Dependency maven:org.hsqldb:hsqldb:2.5.2 is vulnerable, safe version 2.7.1
+CVE-2022-41853 9.8 Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability
+-->
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
@@ -324,6 +348,20 @@
       <groupId>com.nulab-inc</groupId>
       <artifactId>zxcvbn</artifactId>
     </dependency>
+
+<!--      FIXME:
+Dependency maven:com.thoughtworks.xstream:xstream:1.4.5 is vulnerable, safe version 1.4.20
+CVE-2021-21345 9.9 Deserialization of Untrusted Data vulnerability
+CVE-2021-21347 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21348 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21349 8.6 Deserialization of Untrusted Data vulnerability
+CVE-2013-7285 9.8 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability
+CVE-2017-7957 7.5 Improper Input Validation vulnerability
+CVE-2021-21351 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21341 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2020-26259 6.8 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability
+CVE-2021-21350 9.8 Deserialization of Untrusted Data vulnerability
+-->
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
       <artifactId>xstream</artifactId>
@@ -364,6 +402,10 @@
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>
     </dependency>
+<!--      FIXME:
+Dependency maven:org.webjars:jquery:3.5.1 is vulnerable
+CVE-2014-6071 6.1 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability
+-->
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>
@@ -423,7 +465,7 @@
           <excludeDevtools>true</excludeDevtools>
           <executable>true</executable>
           <mainClass>org.owasp.webgoat.server.StartWebGoat</mainClass>
-          <!-- See http://docs.spring.io/spring-boot/docs/current/reference/html/howto-build.html#howto-extract-specific-libraries-when-an-executable-jar-runs -->
+          <!-- See https://docs.spring.io/spring-boot/docs/current/reference/html/howto-build.html#howto-extract-specific-libraries-when-an-executable-jar-runs -->
           <requiresUnpack>
             <dependency>
               <groupId>org.asciidoctor</groupId>
@@ -681,7 +723,7 @@
                     <argument>${project.build.directory}/webgoat-${project.version}.jar</argument>
                   </arguments>
                   <waitForInterrupt>false</waitForInterrupt>
-                  <healthcheckUrl>http://localhost:${webgoat.port}/WebGoat/actuator/health</healthcheckUrl>
+                  <healthcheckUrl>https://localhost:${webgoat.port}/WebGoat/actuator/health</healthcheckUrl>
                 </configuration>
               </execution>
               <execution>

@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * MD5 hash generator. More information about this class is available from <a target="_top" href=
- * "http://ostermiller.org/utils/MD5.html">ostermiller.org</a>.
+ * "https://ostermiller.org/utils/MD5.html">ostermiller.org</a>.
  *
  * <p>This class takes as input a message of arbitrary length and produces as output a 128-bit
  * "fingerprint" or "message digest" of the input. It is conjectured that it is computationally
@@ -19,8 +19,8 @@ import java.io.UnsupportedEncodingException;
  *
  * <p>For more information see RFC1321.
  *
- * @author Santeri Paavolainen http://santtu.iki.fi/md5/
- * @author Stephen Ostermiller http://ostermiller.org/contact.pl?regarding=Java+Utilities
+ * @author Santeri Paavolainen https://santtu.iki.fi/md5/
+ * @author Stephen Ostermiller https://ostermiller.org/contact.pl?regarding=Java+Utilities
  * @since ostermillerutils 1.00.00
  */
 public class MD5 {

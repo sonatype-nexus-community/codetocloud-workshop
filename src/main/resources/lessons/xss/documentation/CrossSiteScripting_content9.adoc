@@ -32,12 +32,12 @@ OR
 
 _$selector.*text*(someEncodeHtmlMethod(userInputHere))_
 
-If you only want the text of what is output by the user (http://stackoverflow.com/questions/9735045/is-jquery-text-method-xss-safe#9735118)
+If you only want the text of what is output by the user (https://stackoverflow.com/questions/9735045/is-jquery-text-method-xss-safe#9735118)
 
 ==== Backbone.js
 (One character can make such a difference)
 
-http://underscorejs.org/#template
+https://underscorejs.org/#template
 
 https://nvisium.com/blog/2015/05/21/dont-break-your-backbone-xss-mitigation.html
 
