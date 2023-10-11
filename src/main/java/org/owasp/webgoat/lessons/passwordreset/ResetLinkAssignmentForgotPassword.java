@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -103,7 +103,7 @@ public class ResetLinkAssignmentForgotPassword extends AssignmentEndpoint {
       HttpEntity httpEntity = new HttpEntity(httpHeaders);
       new RestTemplate()
           .exchange(
-              String.format("http://%s/PasswordReset/reset/reset-password/%s", host, resetLink),
+              String.format("https://%s/PasswordReset/reset/reset-password/%s", host, resetLink),
               HttpMethod.GET,
               httpEntity,
               Void.class);

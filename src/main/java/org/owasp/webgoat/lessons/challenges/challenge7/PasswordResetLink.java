@@ -12,7 +12,7 @@ public class PasswordResetLink {
 
   public String createPasswordReset(String username, String key) {
     Random random = new Random();
-    if (username.equalsIgnoreCase("admin")) {
+    if (username.equalsIgnoreCase("admin")) {  //FIXME: hardcoded username!
       // Admin has a fix reset link
       random.setSeed(key.length());
     }

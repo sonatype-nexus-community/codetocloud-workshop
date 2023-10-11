@@ -27,7 +27,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 /**
  * ************************************************************************************************
  * This file is part of WebGoat, an Open Web Application Security Project utility. For details,
- * please see http://www.owasp.org/
+ * please see https://www.owasp.org/
  *
  * <p>Copyright (c) 2002 - 2014 Bruce Mayhew
  *

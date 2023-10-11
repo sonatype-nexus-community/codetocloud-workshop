@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -49,7 +49,18 @@ public class VulnerableComponentsLessonTest {
 
   @Test
   public void testTransformation() throws Exception {
-    XStream xstream = new XStream();
+    XStream xstream = new XStream(); /*
+CVE-2021-21345 9.9 Deserialization of Untrusted Data vulnerability
+CVE-2021-21347 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21348 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21349 8.6 Deserialization of Untrusted Data vulnerability
+CVE-2021-21351 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21341 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21350 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21343 7.5 Deserialization of Untrusted Data vulnerability
+CVE-2021-21342 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21344 9.8 Deserialization of Untrusted Data vulnerability
+    */
     xstream.setClassLoader(Contact.class.getClassLoader());
     xstream.alias("contact", ContactImpl.class);
     xstream.ignoreUnknownElements();
@@ -60,6 +71,18 @@ public class VulnerableComponentsLessonTest {
   @Disabled
   public void testIllegalTransformation() throws Exception {
     XStream xstream = new XStream();
+    /*
+CVE-2021-21345 9.9 Deserialization of Untrusted Data vulnerability
+CVE-2021-21347 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21348 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21349 8.6 Deserialization of Untrusted Data vulnerability
+CVE-2021-21351 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21341 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21350 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21343 7.5 Deserialization of Untrusted Data vulnerability
+CVE-2021-21342 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21344 9.8 Deserialization of Untrusted Data vulnerability
+    */
     xstream.setClassLoader(Contact.class.getClassLoader());
     xstream.alias("contact", ContactImpl.class);
     xstream.ignoreUnknownElements();
@@ -73,6 +96,18 @@ public class VulnerableComponentsLessonTest {
   @Test
   public void testIllegalPayload() throws Exception {
     XStream xstream = new XStream();
+    /*
+CVE-2021-21345 9.9 Deserialization of Untrusted Data vulnerability
+CVE-2021-21347 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21348 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21349 8.6 Deserialization of Untrusted Data vulnerability
+CVE-2021-21351 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21341 7.5 Uncontrolled Resource Consumption vulnerability
+CVE-2021-21350 9.8 Deserialization of Untrusted Data vulnerability
+CVE-2021-21343 7.5 Deserialization of Untrusted Data vulnerability
+CVE-2021-21342 9.1 Deserialization of Untrusted Data vulnerability
+CVE-2021-21344 9.8 Deserialization of Untrusted Data vulnerability
+    */
     xstream.setClassLoader(Contact.class.getClassLoader());
     xstream.alias("contact", ContactImpl.class);
     xstream.ignoreUnknownElements();

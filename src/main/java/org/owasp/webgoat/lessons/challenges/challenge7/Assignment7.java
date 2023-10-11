@@ -42,7 +42,7 @@ public class Assignment7 extends AssignmentEndpoint {
           + "If you have any comments or questions, please do not hesitate to reach us at"
           + " support@webgoat-cloud.org\n\n"
           + "Kind regards, \n"
-          + "Team WebGoat";
+          + "Team WebGoat"; //FIXME: hardcoded port number! (8080)
 
   private final Flags flags;
   private final RestTemplate restTemplate;

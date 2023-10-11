@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -56,7 +56,7 @@ public class Assignment5 extends AssignmentEndpoint {
     }
     try (var connection = dataSource.getConnection()) {
       PreparedStatement statement =
-          connection.prepareStatement(
+          connection.prepareStatement( //FIXME: SQL injection vulnerability!
               "select password from challenge_users where userid = '"
                   + username_login
                   + "' and password = '"

@@ -4,4 +4,4 @@ You can structure and format the content however you like. You can even include 
 
 video::video/sample-video.m4v[width=480,start=5]
 
-see http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#videos for more detail on video syntax
+see https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#videos for more detail on video syntax

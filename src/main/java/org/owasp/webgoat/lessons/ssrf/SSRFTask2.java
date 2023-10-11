@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -46,7 +46,7 @@ public class SSRFTask2 extends AssignmentEndpoint {
   }
 
   protected AttackResult furBall(String url) {
-    if (url.matches("http://ifconfig\\.pro")) {
+    if (url.matches("https://ifconfig\\.pro")) {
       String html;
       try (InputStream in = new URL(url).openStream()) {
         html =
@@ -57,7 +57,7 @@ public class SSRFTask2 extends AssignmentEndpoint {
       } catch (IOException e) {
         // in case the external site is down, the test and lesson should still be ok
         html =
-            "<html><body>Although the http://ifconfig.pro site is down, you still managed to solve"
+            "<html><body>Although the https://ifconfig.pro site is down, you still managed to solve"
                 + " this exercise the right way!</body></html>";
       }
       return success(this).feedback("ssrf.success").output(html).build();

@@ -47,7 +47,7 @@ public class LessonProgressService {
   @AllArgsConstructor
   @Getter
   // Jackson does not really like returning a map of <Assignment, Boolean> directly, see
-  // http://stackoverflow.com/questions/11628698/can-we-make-object-as-key-in-map-when-using-json
+  // https://stackoverflow.com/questions/11628698/can-we-make-object-as-key-in-map-when-using-json
   // so creating intermediate object is the easiest solution
   private static class LessonOverview {
 

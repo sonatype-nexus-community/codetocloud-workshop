@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -117,7 +117,7 @@ public class FileServer {
     }
 
     modelAndView.addObject("files", uploadedFiles);
-    modelAndView.addObject("webwolf_url", "http://" + server + ":" + port);
+    modelAndView.addObject("webwolf_url", "https://" + server + ":" + port);
     return modelAndView;
   }
 }

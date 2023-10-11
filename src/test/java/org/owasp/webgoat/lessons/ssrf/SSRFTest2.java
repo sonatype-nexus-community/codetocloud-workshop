@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -51,7 +51,7 @@ public class SSRFTest2 extends LessonTest {
   @Test
   public void modifyUrlIfconfigPro() throws Exception {
     mockMvc
-        .perform(MockMvcRequestBuilders.post("/SSRF/task2").param("url", "http://ifconfig.pro"))
+        .perform(MockMvcRequestBuilders.post("/SSRF/task2").param("url", "https://ifconfig.pro"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.lessonCompleted", is(true)));
   }

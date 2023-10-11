@@ -1,5 +1,5 @@
 /*
- * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see http://www.owasp.org/
+ * This file is part of WebGoat, an Open Web Application Security Project utility. For details, please see https://www.owasp.org/
  *
  * Copyright (c) 2002 - 2019 Bruce Mayhew
  *
@@ -68,7 +68,7 @@ public class ResetLinkAssignment extends AssignmentEndpoint {
   static final String TEMPLATE =
       """
           Hi, you requested a password reset link, please use this <a target='_blank'
-           href='http://%s/WebGoat/PasswordReset/reset/reset-password/%s'>link</a> to reset your
+           href='https://%s/WebGoat/PasswordReset/reset/reset-password/%s'>link</a> to reset your
            password.
 
           If you did not request this password change you can ignore this message.

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * ************************************************************************************************
  * This file is part of WebGoat, an Open Web Application Security Project utility. For details,
- * please see http://www.owasp.org/
+ * please see https://www.owasp.org/
  *
  * <p>Copyright (c) 2002 - 2014 Bruce Mayhew
  *
@@ -52,7 +52,7 @@ public class Assignment1 extends AssignmentEndpoint {
   public AttackResult completed(@RequestParam String username, @RequestParam String password) {
     boolean ipAddressKnown = true;
     boolean passwordCorrect =
-        "admin".equals(username)
+        "admin".equals(username)  //FIXME: hardcoded username and password!
             && PASSWORD
                 .replace("1234", String.format("%04d", ImageServlet.PINCODE))
                 .equals(password);

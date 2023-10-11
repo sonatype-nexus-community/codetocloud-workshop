@@ -37,4 +37,4 @@ Before we go on to practice, here's some good reading on Insecure Direct Object 
 * https://www.owasp.org/index.php/Top_10-2017_A5-Broken_Access_Control
 * https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html
 * https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References
-* http://cwe.mitre.org/data/definitions/639.html
+* https://cwe.mitre.org/data/definitions/639.html
